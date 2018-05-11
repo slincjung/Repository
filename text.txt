@@ -1,0 +1,160 @@
+Last login: Fri May 11 18:00:40 on ttys001
+MacBook-Pro:~ slinjung$ git --version
+git version 2.16.3
+MacBook-Pro:~ slinjung$ ls -al /usr/local/bin
+total 69328
+drwxr-xr-x  11 root  wheel       352 May 11 17:20 .
+drwxr-xr-x   9 root  wheel       288 May 11 17:17 ..
+lrwxr-xr-x   1 root  wheel        14 May 11 17:20 git -> ../git/bin/git
+lrwxr-xr-x   1 root  wheel        37 May 11 17:20 git-credential-osxkeychain -> ../git/bin/git-credential-osxkeychain
+lrwxr-xr-x   1 root  wheel        24 May 11 17:20 git-cvsserver -> ../git/bin/git-cvsserver
+lrwxr-xr-x   1 root  wheel        20 May 11 17:20 git-shell -> ../git/bin/git-shell
+lrwxr-xr-x   1 root  wheel        26 May 11 17:20 git-upload-pack -> ../git/bin/git-upload-pack
+lrwxr-xr-x   1 root  wheel        15 May 11 17:20 gitk -> ../git/bin/gitk
+-rwxr-xr-x   1 root  wheel  35492912 Mar  7 07:44 node
+lrwxr-xr-x   1 root  wheel        38 Mar 28 13:07 npm -> ../lib/node_modules/npm/bin/npm-cli.js
+lrwxr-xr-x   1 root  wheel        38 Mar 28 13:07 npx -> ../lib/node_modules/npm/bin/npx-cli.js
+MacBook-Pro:~ slinjung$ cd /Applications/XAMPP/htdocs/
+.DS_Store          applications.html  bitnami.css        dashboard/         favicon.ico        img/               index.php          practice folder/   webalizer/
+MacBook-Pro:~ slinjung$ cd Desktop/
+.DS_Store                                 Atelier/                                  Work/                                     git-2.16.3-intel-universal-mavericks.dmg
+.localized                                Budget2018.numbers                        ascii.txt                                 
+ASCII art.rtf                             Programming/                              e-티켓 확인증 - Korean Air.pdf   
+MacBook-Pro:~ slinjung$ cd Desktop/Programming/
+.DS_Store         20180315/         20180320/         20180326/         20180330/         20180405/         20180411/         20180417/         20180423/
+20180312/         20180316/         20180321/         20180327/         20180402/         20180406/         20180412/         20180418/         20180424/
+20180313/         20180317_weekend/ 20180322/         20180328/         20180403/         20180409/         20180413/         20180419/         20180425/
+20180314/         20180319/         20180323/         20180329/         20180404/         20180410/         20180416/         20180420/         20180511/
+MacBook-Pro:~ slinjung$ cd Desktop/Programming/20180511/
+MacBook-Pro:20180511 slinjung$ ls
+MacBook-Pro:20180511 slinjung$ git clone https://github.com/slincjung/Repository.git
+Cloning into 'Repository'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+MacBook-Pro:20180511 slinjung$ cd Desktop/Programming/20180511/anotherfile.html
+-bash: cd: Desktop/Programming/20180511/anotherfile.html: No such file or directory
+MacBook-Pro:20180511 slinjung$ Desktop/Programming/20180511/anotherfile.html
+-bash: Desktop/Programming/20180511/anotherfile.html: No such file or directory
+MacBook-Pro:20180511 slinjung$ cd Desktop/Programming/20180511/
+-bash: cd: Desktop/Programming/20180511/: No such file or directory
+MacBook-Pro:20180511 slinjung$ cd Desktop/Programming/
+-bash: cd: Desktop/Programming/: No such file or directory
+MacBook-Pro:20180511 slinjung$ cd Desktop/Programming
+-bash: cd: Desktop/Programming: No such file or directory
+MacBook-Pro:20180511 slinjung$ cd git status
+-bash: cd: git: No such file or directory
+MacBook-Pro:20180511 slinjung$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+MacBook-Pro:20180511 slinjung$ git --version
+git version 2.16.3
+MacBook-Pro:20180511 slinjung$ cd Desktop/Programming/20180511/Repository/
+-bash: cd: Desktop/Programming/20180511/Repository/: No such file or directory
+MacBook-Pro:20180511 slinjung$ dir
+-bash: dir: command not found
+MacBook-Pro:20180511 slinjung$ ls
+Repository
+MacBook-Pro:20180511 slinjung$ pwd
+/Users/slinjung/Desktop/Programming/20180511
+MacBook-Pro:20180511 slinjung$ cd Repository/
+MacBook-Pro:Repository slinjung$ ls -al
+total 16
+drwxr-xr-x   6 slinjung  staff   192 May 11 18:06 .
+drwxr-xr-x   4 slinjung  staff   128 May 11 18:03 ..
+drwxr-xr-x  13 slinjung  staff   416 May 11 18:02 .git
+-rw-r--r--   1 slinjung  staff    24 May 11 18:02 README.md
+-rw-r--r--@  1 slinjung  staff     0 May 11 18:04 newfile.html
+-rw-r--r--@  1 slinjung  staff  3470 May 11 18:06 text.txt
+MacBook-Pro:Repository slinjung$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	newfile.html
+	text.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+MacBook-Pro:Repository slinjung$ git add newfile.html
+MacBook-Pro:Repository slinjung$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   newfile.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	text.txt
+
+MacBook-Pro:Repository slinjung$ git commit -"I'm committing the new file now. Let's see if it works."
+error: unknown switch `I'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+MacBook-Pro:Repository slinjung$ git commit -"Committing the new file now. Let's see if it works."
+fatal: could not lookup commit ommitting the new file now. Let's see if it works.
+MacBook-Pro:Repository slinjung$ git commit -m "Committing the new file now. Let's see if it works."
+[master 4f8a4e9] Committing the new file now. Let's see if it works.
+ Committer: Slin Jung <slinjung@MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newfile.html
+MacBook-Pro:Repository slinjung$ 
