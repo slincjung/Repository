@@ -157,4 +157,89 @@ After doing this, you may fix the identity used for this commit with:
 
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 newfile.html
-MacBook-Pro:Repository slinjung$ 
+MacBook-Pro:Repository slinjung$ git log
+commit 4f8a4e9ccf63815cbc902d6f33e5f29563e42953 (HEAD -> master)
+Author: Slin Jung <slinjung@MacBook-Pro.local>
+Date:   Fri May 11 18:17:27 2018 +0900
+
+    Committing the new file now. Let's see if it works.
+
+commit 4acac6a06f237a4db561e4889c69fb1ee395cd8d (origin/master, origin/HEAD)
+Author: slincjung <39186212+slincjung@users.noreply.github.com>
+Date:   Fri May 11 17:50:12 2018 +0900
+
+    Initial commit
+MacBook-Pro:Repository slinjung$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   newfile.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	text.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MacBook-Pro:Repository slinjung$ git add .
+MacBook-Pro:Repository slinjung$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   newfile.html
+	new file:   text.txt
+
+MacBook-Pro:Repository slinjung$ git commit -m "Added a sentence into the file so it's no longer blank."
+[master 48bbc38] Added a sentence into the file so it's no longer blank.
+ Committer: Slin Jung <slinjung@MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 161 insertions(+)
+ create mode 100644 text.txt
+MacBook-Pro:Repository slinjung$ git log
+commit 48bbc38e77e920346aad38ec59ca7ba228cbd83b (HEAD -> master)
+Author: Slin Jung <slinjung@MacBook-Pro.local>
+Date:   Fri May 11 18:21:39 2018 +0900
+
+    Added a sentence into the file so it's no longer blank.
+
+commit 4f8a4e9ccf63815cbc902d6f33e5f29563e42953
+Author: Slin Jung <slinjung@MacBook-Pro.local>
+Date:   Fri May 11 18:17:27 2018 +0900
+
+    Committing the new file now. Let's see if it works.
+
+commit 4acac6a06f237a4db561e4889c69fb1ee395cd8d (origin/master, origin/HEAD)
+Author: slincjung <39186212+slincjung@users.noreply.github.com>
+Date:   Fri May 11 17:50:12 2018 +0900
+
+    Initial commit
+MacBook-Pro:Repository slinjung$ git push
+Username for 'https://github.com': slincjung
+Password for 'https://slincjung@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 3.11 KiB | 3.11 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/slincjung/Repository.git
+   4acac6a..48bbc38  master -> master
